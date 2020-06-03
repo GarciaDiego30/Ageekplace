@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!--La hace responsiva-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Geek Place</title>
+  </head>
+  <body style="background-color: #57A6DD">
+<!--NavBar--->
+<div class="navbar navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg">
+            <img src="img/Geek logo.png" class="img-fluid"  height="150" width="170" alt="logo">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white h6" href="Index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white h6" href="Comics.html">Comics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white h6" href="Juegos.html">Juegos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white h6" href="contacto.html">Acerca de Nosotros</a>
+              </li>
+            </ul>
+          </div>
+          </nav>
+</div>
+
+  <img src="img/Portada.jpg" class="img-fluid rounded mx-auto d-block" height="150" width="170" alt="...">
+ 
+ <div class="jumbotron container">  
+<div class="container mt-3">
+  <h2>Catalogo</h2> 
+  <input class="form-control" id="myInput" type="text" placeholder="Buscar">
+  <br>
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Plataformas</th>
+        <th>Año</th>
+		<th>Precio</th>
+		<th>Imagen</th>
+      </tr>
+    </thead>
+      <tbody id="myTable">
+      <tr>
+        <td>Assasins Creed</td>
+        <td>Xbox360 , XboxOne , PS4 , PS3 , PC , Mac</td>
+        <td>2007.</td>
+		<td>$200.</td>
+		<td><img src="img/AC1.jpg" width="200" height="250" > <td>
+      </tr>
+     <tr>
+        <td>BioShock</td>
+         <td>Xbox360 , XboxOne , PS4 , PS3 , PC , Mac</td>
+        <td>2007.</td>
+		<td>$699.</td>
+		<td><img src="img/BS1.jpg" width="200" height="250" > <td>
+      </tr>
+        <td>Call of Duty: Black Ops 4</td>
+		<td>XboxOne ,PS4 , PC</td>
+        <td>2018.</td>
+		<td>$1570.</td>
+		<td><img src="img/CODBO4.jpg" width="200" height="250" > <td>
+      </tr>
+	    <td>Death Stranding</td>
+		<td>PS4</td>
+        <td>2019.</td>
+		<td>$1750.</td>
+		<td><img src="img/DS.jpg" width="200" height="250" > <td>
+      </tr>
+	   <td>eFootball PES 2020 </td>
+		<td>PS4, Android, XboxOne, PC</td>
+        <td>2019.</td>
+		<td>$899.</td>
+		<td><img src="img/PES2020.jpg" width="200" height="250" > <td>
+      </tr>
+	  	<td>Far Cry:Primal </td>
+		<td>PS4, XboxOne, PC</td>
+        <td>2016.</td>
+		<td>$649.</td>
+		<td><img src="img/FC.jpg" width="200" height="250" > <td>
+      </tr>
+	  	<td>Gears 5 </td>
+		<td>XboxOne</td>
+        <td>2019.</td>
+		<td>$1399.</td>
+		<td><img src="img/GEARS5.jpg" width="200" height="250" > <td>
+      </tr>
+	    <td>Halo:Reach</td>
+		<td>XboxOne, Xbox360, PC</td>
+        <td>2010.</td>
+		<td>$270.</td>
+		<td><img src="img/Reach.jpg" width="200" height="250" > <td>
+      </tr>
+	    <td>Injustice :Gods Among US</td>
+		<td>PS4, Android, PS3, Xbox360, iOS, PSVita, Wii U</td>
+        <td>2013.</td>
+		<td>$899.</td>
+		<td><img src="img/Injustice.jpg" width="200" height="250" > <td>
+      </tr>
+	    <td>Jump Force</td>
+		<td>PlayStation 4, Xbox One, Nintendo Switch, PC</td>
+        <td>2019.</td>
+		<td>$2099.</td>
+		<td><img src="img/JF.jpg" width="200" height="250" > <td>
+      </tr>
+	  <td>Kirby Star Allies</td>
+		<td>Nintendo Switch</td>
+        <td>2018.</td>
+		<td>$1400.</td>
+		<td><img src="img/Kirby.jpg" width="200" height="250" > <td>
+      </tr>
+	  <td>Luigi's Mansion 3</td>
+		<td>Nintendo Switch</td>
+        <td>2019.</td>
+		<td>$1199.</td>
+		<td><img src="img/LM3.jpg" width="200" height="250" > <td>
+      </tr>
+	  <td>Mario Putazos</td>
+		<td>Nintendo Switch</td>
+        <td>2019.</td>
+		<td>$1199.</td>
+		<td><img src="img/smashcaja.jpg" width="200" height="250" > <td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>
